@@ -3,9 +3,9 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import * as Animatable from 'react-native-animatable';
 
 const SplashScreen = ({ navigation }) => {
-   
+
     useEffect(() => {
-        
+
         const timer = setTimeout(() => {
             navigation.replace('SignIn');
         }, 3000);
@@ -14,12 +14,12 @@ const SplashScreen = ({ navigation }) => {
             clearTimeout(timer);
         };
     }, [navigation]);
-    
+
     return (
         <View style={styles.container}>
             <Animatable.Image
                 animation="zoomIn"
-                duration={3500}
+                duration={2500}
                 delay={1500}
                 source={require('./assets/SplashImage.jpeg')}
                 style={styles.image}
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightblue',
     },
     image: {
-        width: 500, height: 500
+        width: 500, height: 200
     },
 });
